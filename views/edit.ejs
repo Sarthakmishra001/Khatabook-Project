@@ -1,0 +1,41 @@
+<%- include('./partials/header.ejs') %>
+    <div class="container mx-auto p-6">
+        <div class="max-w-lg mx-auto bg-white p-6 border border-gray-300 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">update Hisaab</h2>
+            <form action="/hisaab/edit/<%= update._id %>" method="post">
+                
+                <div class="mb-4">
+                    <input name="title" disabled type="text" value="<%= update.title %>"
+                        class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <textarea name="description" placeholder="Daal, Aata, Cheeni"
+                        class="resize-none w-full p-2 border border-gray-300 rounded h-32"><%= update.description%>
+                    </textarea>
+                </div>
+               
+
+            
+                <div class="mb-4">
+                    <label class="inline-flex items-center">
+                        <input name="shareable" type="checkbox" class="form-checkbox" <%= update.shareable ? 'checked' : '' %>>
+                        <span class="ml-2">Shareable file?</span>
+                    </label>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="inline-flex items-center">
+                        <input name="editpermissions" type="checkbox" class="form-checkbox"  <%= update.editpermissions ? 'checked' : '' %> >
+                        <span class="ml-2">Edit permissions.</span>
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">update this Hisaab</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+
+
+    

@@ -1,0 +1,18 @@
+<%- include('./partials/header.ejs') %>
+<div class="logincontainer mt-28 w-full h-[80%] flex items-center justify-center">
+    <div class="loginpanel">
+        <h3 class="text-2xl mb-3">Create account</h3>
+        <form autocomplete="off" action="/register" method="post" enctype="multipart/form-data" class="flex flex-col gap-2 items-start">
+            <input class="block px-3 py-2 border-[1px] border-zinc-100 rounded-md" type="email" placeholder="Email" name="email" required>
+            <input class="block px-3 py-2 border-[1px] border-zinc-100 rounded-md cursor-pointer" name="image" type="file" accept="image/*" aria-label="Upload Profile Image">
+            <h3 class="text-gray-600 px-3 text-sm">Upload profile image</h3>
+            <input class="block px-3 py-2 border-[1px] border-zinc-100 rounded-md" type="text" placeholder="Username" name="username" required>
+            <input class="block px-3 py-2 border-[1px] border-zinc-100 rounded-md" type="text" placeholder="Full Name" name="name" required>
+            <input class="block px-3 py-2 border-[1px] border-zinc-100 rounded-md" type="password" placeholder="Password" name="password" required>
+            <input class="block px-4 py-2 bg-blue-500 rounded-md text-white" type="submit" value="Create">
+        </form>
+        
+        <a class="mt-5 inline-block text-blue-500" href="/">Have an account, login here.</a>
+    </div>
+</div>
+<%- include('./partials/footer.ejs') %>
